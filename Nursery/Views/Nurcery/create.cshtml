@@ -24,8 +24,16 @@
                 @Html.TextBoxFor(p => p.Description, new { @class = "form-control" })
             </div>
             <div class="mb-2">
-                @Html.LabelFor(p => p.IsAvailable)
-                @Html.CheckBoxFor(p => p.IsAvailable)
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        @Html.LabelFor(p => p.IsAvailable)
+                    </label>
+                </div>
+
+
+                @*@Html.LabelFor(p => p.IsAvailable)
+        @Html.CheckBoxFor(p => p.IsAvailable)*@
 
             </div>
             <div class="mb-2">

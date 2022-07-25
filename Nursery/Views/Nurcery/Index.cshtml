@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Nursery.Models.Nursery>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <h2>Product Details</h2>
+
+            <table class="table table-striped table-hover">
+                <tr class="table-dark">
+                    <th>Id</th>
+                    <th>Plants Name</th>
+
+                </tr>
+                @foreach (var plnt in Model)
+                {
+                    <tr>
+                        <td>@plnt.Id</td>
+                        <td>@Html.ActionLink(plnt.Name, "Detais", "Nurcery", new { id = plnt.Id }, null)</td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

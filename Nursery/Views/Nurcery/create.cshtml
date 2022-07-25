@@ -1,0 +1,43 @@
+﻿@using Nursery.Models
+@model Nursery
+@{
+    ViewBag.Title = "create";
+}
+
+<h2>Adding new Product</h2>
+<hr/>
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm())
+        {
+            <div class="mb-2">
+                @Html.LabelFor(p => p.SKU_NO)
+                @Html.TextBoxFor(p => p.SKU_NO, new { @class = "form-control" })
+            </div>
+            <div class="mb-2">
+                @Html.LabelFor(p => p.Name)
+                @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+            </div>
+            <div class="mb-2">
+                @Html.LabelFor(p => p.Description)
+                @Html.TextBoxFor(p => p.Description, new { @class = "form-control" })
+            </div>
+            <div class="mb-2">
+                @Html.LabelFor(p => p.IsAvailable)
+                @Html.CheckBoxFor(p => p.IsAvailable)
+
+            </div>
+            <div class="mb-2">
+                @Html.LabelFor(p => p.CategoryId)
+                @Html.DropDownListFor(p => p.CategoryId, new SelectList(ViewBag.Categories, "Id", "Name"), new {@class ="form-select"})
+            </div>
+            <div class="mb-2">
+                <button type="submit" class="btn btn-outline-primary">Save</button>
+                <button type="reset" class="btn btn-outline-danger">Reset</button>
+            </div>
+
+        }
+    </div>
+</div>
+

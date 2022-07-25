@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202207251041224_initialmodel.designer.cs">
       <DependentUpon>202207251041224_initialmodel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202207251544417_CreatedUniqueIdInNurseries.cs" />
+    <Compile Include="Migrations\202207251544417_CreatedUniqueIdInNurseries.designer.cs">
+      <DependentUpon>202207251544417_CreatedUniqueIdInNurseries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Category.cs" />
@@ -231,6 +235,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202207251041224_initialmodel.resx">
       <DependentUpon>202207251041224_initialmodel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202207251544417_CreatedUniqueIdInNurseries.resx">
+      <DependentUpon>202207251544417_CreatedUniqueIdInNurseries.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
